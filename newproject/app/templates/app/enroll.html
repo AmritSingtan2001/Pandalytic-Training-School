@@ -1,0 +1,102 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid">
+      <!-- CONTACT -->
+      <div
+        class="row justify-content-evenly pt-2 pb-5"
+        style="background-color: #f1f1f1"
+      >
+        <div class="col-md-8 mt-5">
+          <h3 class="mb-4 text-center">Enroll Course</h3>
+          <div class="mt-2 text-center" style="width: 500px; ">
+            {% if messages %}
+            {% for msg in messages %}
+              <div class="alert alert-danger alert-dismissable fade show text-start">
+                {{msg.message}}
+                <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+                
+              </div>
+            {% endfor %}
+          {% endif %}
+
+          {% if data %}
+              <div class="alert alert-success alert-dismissable fade show text-start">
+                {{data}}
+                <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+                
+              </div>
+          {% endif %}
+          </div>
+        
+          <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name:</label>
+              <input
+                type="text"
+                name="fullname"
+                placeholder="name"
+                class="form-control"
+                id="name"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email Address:</label
+              >
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="email"
+                placeholder="name@gmail.com"
+                aria-describedby="emailHelp"
+              />
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Contact No:</label>
+                <input
+                  type="text"
+                  name="contact"
+                  class="form-control"
+                  placeholder="9800000000"
+                  id="contact"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="name" class="form-label">Location:</label>
+                <input
+                  type="text"
+                  name="location"
+                  placeholder="Kathmandu, Nepal"
+                  class="form-control"
+                  id="location"
+                />
+              </div>
+
+              <label for="name" class="form-label">Enroll Course:</label>
+              <select
+                class="form-select"
+                id="course"
+                name="course"
+                aria-label="Default select example"
+              >
+                <option selected value="">Interested Course:</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="Data Science">Data Science</option>
+              </select>
+            </div>
+
+            <button type="submit" id="enroll" class="btn bg-warning enrollBtn">
+              Enroll
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- CONTACT END -->
+    </div>
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content%}
+  
+    <div class="container-fluid">
+      <div
+        class="row justify-content-evenly pt-2 pb-5"
+        style="background-color: #f1f1f1"
+      >
+        <div class="col-md-5 mt-5">
+          <h3 class="mb-4">Contact Form</h3>
+          <div class="mt-2 text-center" style="width: 500px; ">
+            {% if messages %}
+            {% for msg in messages %}
+              <div class="alert alert-success alert-dismissable fade show text-start">
+                {{msg.message}}
+                <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+                
+              </div>
+            {% endfor %}
+          {% endif %}
+          </div>
+          <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Name:</label>
+              <input
+                type="text"
+                placeholder="name"
+                name="fullname"
+                class="form-control"
+                id="name"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email Address:</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="name@gmail.com"
+                id="email"
+                aria-describedby="emailHelp" required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Contact No:</label>
+              <input
+                type="text"
+                name="contact"
+                placeholder="9800000000"
+                class="form-control"
+                id="contact"
+                required
+              />
+            </div>
+
+            <label for="name" class="form-label">Enroll Course:</label>
+            <select
+              class="form-select"
+              name="course"
+              id="course"
+              aria-label="Default select example" required
+            >
+              <option selected value="">Interested Course:</option>
+              <option value="Javascript">Javascript</option>
+              <option value="Python">Python</option>
+              <option value="Data Science">Data Science</option>
+            </select>
+
+            <div class="mb-3">
+              <label for="message" class="form-label" id="message"
+                >Message</label
+              >
+              <textarea name="textarea1" class="form-control" id="message"  rows="3" ></textarea>
+            </div>
+
+            <button type="submit" id="submit" class="btn btn-success">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <!--ADDRESS-->
+        <div class="col-md-5 mt-5">
+          <h3 class="mb-4">Address</h3>
+          <!-- <p>
+              Balkumari, Lalitpur <br />
+              shibuchapagain12@gmail.com <br />
+              <i class="bi bi-telephone-fill"></i> : 9864423595
+            </p> -->
+          <a href="#" class="link-dark text-decoration-none"
+            >Sanepa, Lalitpur</a
+          >
+          <br />
+          <a href="#" class="link-dark text-decoration-none">name@gmail.com</a>
+          <br />
+          <a href="#" class="link-dark text-decoration-none"
+            >Lorem ipsum dolor sit.</a
+          >
+          <br />
+          <a href="#" class="link-dark text-decoration-none">
+            <i class="bi text-success bi-telephone-fill"></i> : 9800000000</a
+          >
+          <br />
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d883.2578866180804!2d85.30690410987326!3d27.68541984854839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb184912a56fef%3A0x5980611bc24818a9!2z4KS44KS-4KSo4KWH4KSq4KS-IOCkmuCli-CklSwg4KSy4KSy4KS_4KSk4KSq4KWB4KSwIDQ0NjAw!5e0!3m2!1sne!2snp!4v1661069417262!5m2!1sne!2snp"
+            width="400"
+            height="350"
+            style="border: 0"
+            class="pt-4"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <!--ADDRESS END-->
+      </div>
+    </div>
+    <!--CONTACT END-->
+
+{% endblock %}

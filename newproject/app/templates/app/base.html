@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'app/css/bootnavbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'app/css/responshiv.css' %}" />
+
+
+    <title>Home</title>
+    <meta
+      name="description"
+      content="Multi level hover dropdown Navbar for bootstrap 4"
+    />
+    <meta
+      name="keywords"
+      content="Multi level hover dropdown Navbar for bootstrap 4"
+    />
+ 
+    <link rel="stylesheet" type="text/css" href="{% static 'app/css/style.css' %}">
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+  rel="stylesheet"
+/>
+
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"
+></script>
+
+  </head>
+  <header>
+    <div class="">
+        <div class="row slogan">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                <div class="slogan">
+                    <p><span>Volunteer Nepal :</span> The best experience for volunteers, the best value for Nepal.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="header-social-media pull-right">
+                    <ul class="list-unstyled mt-9">
+                        <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </header>
+
+  <body>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <!-- Container wrapper -->
+            <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand me-2" href="/">
+                <img
+                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                height="16"
+                alt="logo not found.."
+                loading="lazy"
+                style="margin-top: -1px;"
+                />
+            </a>
+        
+            <!-- Toggle button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarButtonsExample"
+                aria-controls="navbarButtonsExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+        
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <marquee class="mt-2 " style="color: #00172d;;">System generated insights highlighting areas of overspending and potential savings, including</marquee>
+                    </li>
+
+                </ul>
+                
+                <div class="d-flex align-items-center" >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="d-flex align-items-center ">
+                    
+                            <!-- <button type="button" class="btn btn-link px-3 me-2 ">
+                             
+                            </button> -->
+                            <li class="nav-item pe-3 text-uppercase">
+                              <a href ="/" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='blue'">Home</a>
+                            </li>
+                            
+                            <li class="nav-item dropdown dp1 pe-3">
+                                <a
+                                    class="nav-link  dropdown text-uppercase"
+                                    href="{% url 'enroll' %}"
+                                    onMouseOver="this.style.color='red'" onMouseOut="this.style.color='blue'"
+                                    style="color:#1266f1;"
+                                >
+                                    Courses
+                                </a>
+                                <ul class="dropdown-menu dm1">
+                                    <li class="nav-item dropdown">
+                                      <a class="dropdown-item text-primary " href="{% url 'python' %}" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='blue'">Python </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                      <a class="dropdown-item text-primary" href="{% url 'mern' %}" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='blue'">MERN </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                      <a class="dropdown-item text-primary" href="{% url 'datascience' %}" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='blue'">Data Science </a>
+                                    </li>
+                                </ul>
+                              </li>
+                              <li class="text-uppercase pe-3">
+                                  <a href ="{% url 'contact' %}" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='blue'"> Contact Us</a>
+                              </li>
+                            <!-- <button type="button" class="btn btn-link px-3 me-2">
+                            </button> -->
+                        </div>
+                    </ul>
+                </div>
+                
+            </div>
+            <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        {% block content%}
+
+
+
+
+
+
+
+
+        {%endblock%}
+    
+        
+        
+        <!-- footer section start -->
+        <div class="container-fluid" style="background-color: #00172d">
+            <div class="container">
+              <!-- <div class="row"> -->
+              <!-- FOOTER -->
+              <div class="row justify-content-evenly text-white pt-5">
+                <div class="col-md-4 pt-4">
+                  <h5 class="pb-4 fw-bold">VISION</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+                    dignissimos voluptates iure.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                    illo pariatur officiis facere voluptatum sequi culpa est?
+                    Cupiditate necessitatibus laudantium voluptatum eius? Temporibus,
+                    porro ab?
+                  </p>
+        
+                  <div class="container p-1 pb-0">
+                    <!-- Section: Social media -->
+                    <section class="mb-4">
+                      <!-- Facebook -->
+                      <a
+                        class="btn btn-outline-light btn-floating m-1"
+                        href="#!"
+                        role="button"
+                        ><i class="fab fa-facebook"></i></a>
+        
+                      <!-- Twitter -->
+                      <a
+                        class="btn btn-outline-light btn-floating m-1"
+                        href="#!"
+                        role="button"
+                        ><i class="fab fa-twitter"></i></a>
+        
+                      <!-- Google -->
+                      <a
+                        class="btn btn-outline-light btn-floating m-1"
+                        href="#!"
+                        role="button"
+                        ><i class="fab fa-google-plus-g"></i></a>
+        
+                      <!-- Instagram -->
+                      <a
+                        class="btn btn-outline-light btn-floating m-1"
+                        href="#!"
+                        role="button"
+                        ><i class="fab fa-instagram"></i></a>
+                    </section>
+                    <!-- Section: Social media -->
+                  </div>
+                </div>
+        
+                <div class="col-md-3 pt-4">
+                  <h5 class="pb-4 text-uppercase fw-bold">MISSION</h5>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </p>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </p>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </p>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </p>
+                </div>
+        
+                <div class="col-md-3 pt-4">
+                  <h5 class="pb-4 fw-bold">ONGOING COURSES</h5>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none">Python</a>
+                  </p>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none">MERN Stack</a>
+                  </p>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none"
+                      >Data Science</a
+                    >
+                  </p>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none"
+                      >Machine Learning</a
+                    >
+                  </p>
+        
+                  <p>
+                    <a href="#" class="link-light text-decoration-none"
+                      >Data Structure and Algorithm</a
+                    >
+                  </p>
+                </div>
+        
+                <div class="col-md-2 pt-4">
+                  <h5 class="pb-4 fw-bold">CONTACT</h5>
+        
+                  <p>
+                    Office: <br />
+                    Sanepa-02,Lalitpur, Nepal
+                  </p>
+        
+                  <p>
+                    Call: <br />
+                    9800000000
+                  </p>
+        
+                  <p>
+                    Mail: <br />
+                    training@gmail.com
+                  </p>
+                </div>
+              </div>
+        
+              <!-- COPYRIGHT -->
+              <div class="row pt-2 pb-4 text-white">
+                <div class="col-12">
+                  <p class="text-center fs-6">© Traning Center : name@gmail.com</p>
+                </div>
+              </div>
+              <!-- COPYRIGHT END-->
+              <!-- FOOTER END -->
+              <!-- </div> -->
+            </div>
+          </div>
+         <!-- end footer section -->
+           
+         
+            <!-- End of .container -->
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="js/bootnavbar.js"></script>
+            <script>
+              new bootnavbar();
+            </script>
+             <script src="{% static 'app/js/enroll.js' %}"></script>
+             <script src="{% static 'app/js/script.js' %}"></script>
+          </body>
+        </html>
+        
+
+        
+        <!-- end footer section -->

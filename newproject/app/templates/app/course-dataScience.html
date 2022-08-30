@@ -1,0 +1,207 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+<div class="mt-5">
+  <body>
+    <!-- WRITE CONTENT -->
+    <!-- COURSE START -->
+    <div class="container-fluid">
+      <div class="row justify-content-evenly">
+        <div class="col-md-11">
+          <div class="row justify-content-evenly">
+            <div class="col-md-8">
+              <h5 class="text-bold">Description</h5>
+              <p class="fs-5 fw-bold">Data Science TRAINING IN NEAPL</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+                debitis maxime ad harum magnam vitae possimus odio consectetur
+                molestias, iusto officia exercitationem quaerat ducimus in?
+                Voluptate repellendus dicta libero earum labore sed repudiandae
+                necessitatibus explicabo ea eum, facere ad fugit aspernatur
+                ratione ipsa expedita, culpa esse, accusamus id nihil tempora.
+                Quam commodi facilis porro at!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Adipisci, obcaecati.
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </li>
+              </ul>
+              <h5 class="mt-4">Benifits of Data Science</h5>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Doloribus, quibusdam.
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque, similique?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque, similique?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque, similique?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque, similique?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque, similique?
+                  </p>
+                </li>
+              </ul>
+              <p class="mt-5">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+                atque minus dolorum veniam, soluta hic iste dignissimos eum
+                quas! Fugit.
+              </p>
+              <h5 class="mt-2">
+                Benifits of Data Science in Lorem ipsum dolor sit amet.
+              </h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Adipisci, repellat placeat odio quibusdam quasi quaerat?
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime, corrupti!
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime, corrupti!
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime, corrupti!
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime, corrupti!
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <!------------------------------------------------------------->
+            <div class="col-md-4">
+              <h3 class="mb-4 bg-success ps-2 pt-2 pb-2 text-bold text-white">Contact Us For Query</h3>
+              <form method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name:</label>
+                  <input
+                    type="text"
+                    name="fullname"
+                    placeholder="name"
+                    class="form-control"
+                    id="name"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email Address:</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="name@gmail.com"
+                    id="email"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="name" class="form-label">Contact No:</label>
+                  <input
+                    type="number"
+                    name="contact"
+                    placeholder="9800000000"
+                    class="form-control"
+                    id="contact"
+                  />
+                </div>
+
+                <label for="name" class="form-label">Interested Course:</label>
+                <select
+                  class="form-select"
+                  id="course"
+                  name="course"
+                  aria-label="Default select example"
+                >
+                  <option selected value="">Interested Course:</option>
+                  <option value="datascience">Data Science</option>
+                </select>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    name="textarea1"
+                    id="message"
+                    rows="3"
+                  ></textarea>
+                </div>
+
+                <button type="submit" id="submit" class="btn btn-success">
+                  Submit Query
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--COURSE END-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</div>
+{% endblock %}
